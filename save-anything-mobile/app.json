@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "SaveStack",
+    "slug": "save-anything-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0b4f4a"
+      },
+      "package": "com.savestack.mobile"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}

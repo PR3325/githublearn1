@@ -1,2 +1,6 @@
 portfolio-deploy/
 *.zip
+node_modules/
+.expo/
+dist/
+savestack-netlify-upload/

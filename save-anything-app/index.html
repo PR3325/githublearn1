@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SaveStack is a mobile-first app prototype for saving and organizing links, reels, videos, posts, and study resources in one place."
+    />
+    <title>SaveStack | Save Anything</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="phone-frame" aria-label="SaveStack mobile app prototype">
+        <header class="top-bar">
+          <div>
+            <p class="eyebrow">SaveStack</p>
+            <h1>Save anything, find it fast.</h1>
+          </div>
+          <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+            <span aria-hidden="true">◐</span>
+          </button>
+        </header>
+
+        <section class="quick-stats" aria-label="Saved content summary">
+          <article>
+            <span id="totalCount">0</span>
+            <p>Saved</p>
+          </article>
+          <article>
+            <span id="categoryCount">0</span>
+            <p>Categories</p>
+          </article>
+          <article>
+            <span id="favoriteCount">0</span>
+            <p>Favorites</p>
+          </article>
+        </section>
+
+        <section class="save-panel" aria-label="Save a new item">
+          <form id="saveForm">
+            <label>
+              Link or URL
+              <input id="urlInput" type="url" placeholder="https://youtube.com/..." required />
+            </label>
+            <label>
+              Title
+              <input id="titleInput" type="text" placeholder="React Native tutorial" required maxlength="80" />
+            </label>
+            <div class="form-row">
+              <label>
+                Category
+                <select id="categoryInput" required>
+                  <option value="Studies">Studies</option>
+                  <option value="Gym">Gym</option>
+                  <option value="Politics">Politics</option>
+                  <option value="Career">Career</option>
+                  <option value="Business">Business</option>
+                  <option value="Entertainment">Entertainment</option>
+                </select>
+              </label>
+              <label>
+                Platform
+                <select id="platformInput" required>
+                  <option value="YouTube">YouTube</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Website">Website</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Note
+              <textarea id="noteInput" placeholder="Why did you save this?" maxlength="160"></textarea>
+            </label>
+            <button class="primary-button" type="submit" id="submitButton">Save item</button>
+          </form>
+        </section>
+
+        <section class="library-tools" aria-label="Find saved items">
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Search saved links" />
+          </label>
+          <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Filter by category"></div>
+        </section>
+
+        <section class="saved-section" aria-label="Saved content">
+          <div class="section-title">
+            <h2>Your library</h2>
+            <button class="text-button" id="clearFilters" type="button">Clear</button>
+          </div>
+          <div class="saved-list" id="savedList"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <strong>No saved items found</strong>
+            <p>Save a video, reel, article, or useful link and it will appear here by category.</p>
+          </div>
+        </section>
+
+        <nav class="bottom-nav" aria-label="App navigation">
+          <button class="nav-item is-active" type="button">
+            <span aria-hidden="true">⌂</span>
+            Home
+          </button>
+          <button class="nav-item" type="button">
+            <span aria-hidden="true">▦</span>
+            Library
+          </button>
+          <button class="nav-item" type="button">
+            <span aria-hidden="true">★</span>
+            Saved
+          </button>
+        </nav>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
